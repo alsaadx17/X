@@ -1,8 +1,8 @@
 /* Global Styles */
 body {
     margin: 0;
-    background: #000;
-    color: #111;
+    background: var(--color-background);
+    color: var(--color-text-primary);
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: var(--color-background);
     padding: 120px 20px 60px;
     box-sizing: border-box;
 }
@@ -70,7 +70,7 @@ body {
 }
 
 .about-name {
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 3rem;
     font-weight: 400;
     margin: 0 0 10px 0;
@@ -80,7 +80,7 @@ body {
 }
 
 .about-profession {
-    color: #ccc;
+    color: var(--color-text-secondary);
     font-size: 1.2rem;
     font-weight: 400;
     margin: 0 0 30px 0;
@@ -89,7 +89,7 @@ body {
 }
 
 .about-description {
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 1.1rem;
     font-weight: 400;
     margin: 0 0 40px 0;
@@ -109,7 +109,7 @@ body {
 }
 
 .detail-label {
-    color: #ccc;
+    color: var(--color-text-secondary);
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 1px;
@@ -118,20 +118,20 @@ body {
 }
 
 .detail-value {
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.5px;
 }
 
 .about-quote {
-    border-left: 3px solid #fff;
+    border-left: 3px solid var(--color-text-primary);
     padding-left: 20px;
     margin-top: 30px;
 }
 
 .about-quote p {
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 1.1rem;
     font-weight: 400;
     font-style: italic;
@@ -202,7 +202,7 @@ body {
     
     .about-quote {
         border-left: none;
-        border-top: 3px solid #fff;
+        border-top: 3px solid var(--color-text-primary);
         padding-left: 0;
         padding-top: 20px;
         margin-top: 30px;

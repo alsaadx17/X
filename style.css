@@ -1,8 +1,30 @@
+/* CSS Custom Properties (Variables) for Color Scheme */
+:root {
+    /* Primary Colors - Based on the dark grey-blue to black palette */
+    --color-primary-dark: #0f180e;     /* Pure black (far right) */
+    --color-primary-light: #c0c0c0;    /* Pure white for contrast */
+    
+    /* Secondary Colors */
+    --color-secondary-pale: #858585;    /* Medium-dark blue-grey (far left) */
+    --color-secondary-medium: #2d2d2d;  /* Darker blue-grey (second from left) */
+    --color-secondary-light: #1a1a1a;   /* Very dark grey (second from right) */
+
+    --color-accent-hover: #3a3a3a;      /* Slightly lighter for hover states */
+    
+    /* Semantic Colors */
+    --color-background: var(--color-primary-dark);
+    --color-text-primary: var(--color-primary-light);
+    --color-text-secondary: var(--color-secondary-pale);
+    --color-text-muted: var(--color-secondary-medium);
+    --color-border: var(--color-secondary-light);
+    --color-hover: var(--color-accent-hover);
+}
+
 /* Global Styles */
 body {
     margin: 0;
-    background: #000;
-    color: #111;
+    background: var(--color-background);
+    color: var(--color-text-primary);
     font-family: 'Montserrat', Arial, sans-serif;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -57,7 +79,7 @@ img {
     align-items: center;
     justify-content: space-between;
     padding: 8px 16px;
-    background: #000;
+    background: var(--color-background);
     position: absolute;
     top: 0;
     left: 0;
@@ -91,7 +113,7 @@ img {
 }
 
 .navbar .nav-links a {
-    color: #fff;
+    color: var(--color-text-primary);
     text-decoration: none;
     font-size: 0.95rem;
     position: relative;
@@ -105,7 +127,7 @@ img {
 }
 
 .navbar .nav-links a:hover {
-    color: #ccc;
+    color: var(--color-text-secondary);
 }
 
 .navbar .spacer {
@@ -119,14 +141,14 @@ img {
 }
 
 .navbar .social a {
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 1.2rem;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .navbar .social a:hover {
-    color: #ccc;
+    color: var(--color-text-secondary);
 }
 
 .hamburger {
@@ -151,7 +173,7 @@ img {
     height: 2px;
     margin: 3px 0;
     border-radius: 2px;
-    background: #fff;
+    background: var(--color-text-primary);
 }
 
 @media (max-width: 700px) {
@@ -173,8 +195,8 @@ img {
     width: 200px;
     min-width: 140px;
     max-width: 90vw;
-    background: #fff;
-    color: #111;
+    background: var(--color-text-primary);
+    color: var(--color-background);
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -182,7 +204,7 @@ img {
     opacity: 0;
     pointer-events: none;
     border-radius: 10px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 24px rgba(45, 74, 62, 0.12);
     z-index: 2000;
 }
 
@@ -211,7 +233,7 @@ img {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #111;
+    color: var(--color-background);
     line-height: 1;
     padding: 0 4px;
 }
@@ -225,7 +247,7 @@ img {
 }
 
 .mobile-menu-links a {
-    color: #111;
+    color: var(--color-background); /* Darkest green */
     text-decoration: none;
     font-size: 2.2rem;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -247,7 +269,7 @@ img {
 }
 
 .mobile-menu-links a:hover {
-    color: #888;
+    color: var(--color-border); /* Medium green */
 }
 
 .mobile-menu-links.compact {
@@ -270,8 +292,8 @@ img {
 }
 
 .mobile-menu-links.compact a:hover {
-    background: #f2f2f2;
-    color: #222;
+    background: var(--color-hover); /* Very pale green with more green tint */
+    color: var(--color-background); /* Darkest green */
 }
 
 .dropdown-hamburger {
@@ -287,7 +309,7 @@ img {
 .dropdown-hamburger span {
     width: 18px;
     height: 2px;
-    background: #111;
+    background: var(--color-background); /* Darkest green */
     margin: 3px 0;
     border-radius: 2px;
     display: block;
@@ -297,10 +319,10 @@ img {
 .footer {
     position: relative;
     width: 100%;
-    background: #000;
-    color: #fff;
+    background: var(--color-background);
+    color: var(--color-text-primary);
     padding: 60px 0 20px 0;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--color-border);
 }
 
 .footer-container {
@@ -324,7 +346,7 @@ img {
 }
 
 .footer-title {
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0 0 20px 0;
@@ -340,11 +362,11 @@ img {
     left: 0;
     width: 30px;
     height: 2px;
-    background: #fff;
+    background: var(--color-text-primary);
 }
 
 .footer-description {
-    color: #ccc;
+    color: var(--color-text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 0;
@@ -358,7 +380,7 @@ img {
 }
 
 .footer-links a {
-    color: #ccc;
+    color: var(--color-text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 400;
@@ -367,7 +389,7 @@ img {
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: var(--color-text-primary);
     transform: translateX(5px);
 }
 
@@ -378,7 +400,7 @@ img {
 }
 
 .social-link {
-    color: #ccc;
+    color: var(--color-text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 400;
@@ -387,7 +409,7 @@ img {
 }
 
 .social-link:hover {
-    color: #fff;
+    color: var(--color-text-primary);
     transform: translateX(5px);
 }
 
@@ -399,12 +421,12 @@ img {
 .footer-line {
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #666, transparent);
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
     margin-bottom: 20px;
 }
 
 .footer-copyright {
-    color: #888;
+    color: var(--color-text-muted);
     font-size: 0.85rem;
     font-weight: 400;
     margin: 0;
