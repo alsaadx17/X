@@ -136,7 +136,7 @@
 .hero-header {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     background: var(--color-background);
     overflow: hidden;
     display: flex;
@@ -333,7 +333,7 @@
 .featured-work-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: var(--color-background);
     display: flex;
     align-items: center;
@@ -583,7 +583,7 @@
  .timeline-section {
      position: relative;
      width: 100%;
-     height: 100vh;
+     height: 80vh;
      background: var(--color-background);
      display: flex;
      align-items: center;
@@ -804,7 +804,7 @@
  .paradox-section {
      position: relative;
      width: 100%;
-     height: 80vh;
+     height: 75vh;
      display: flex;
      align-items: center;
      justify-content: center;
