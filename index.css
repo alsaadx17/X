@@ -769,35 +769,47 @@
  }
  
  @media (max-width: 600px) {
-     
-     .timeline-entries {
-         padding: 0 5%;
-     }
-     
-         .timeline-entry {
-        margin-bottom: 30px;
+    
+    .timeline-entries {
+        padding: 0 5%;
     }
-     
-     .timeline-title {
-         font-size: 1.5rem;
-     }
-     
-     .timeline-entry-title {
-         font-size: 1.1rem;
-     }
-     
-     .timeline-year {
-         font-size: 1rem;
-     }
-     
-     .timeline-image {
-         height: 150px;
-     }
-     
-     .timeline-caption p {
-         font-size: 0.7rem;
-     }
- }
+    
+        .timeline-entry {
+       margin-bottom: 30px;
+   }
+    
+    .timeline-title {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-entry-title {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-year {
+        font-size: 1rem;
+    }
+    
+    .timeline-image {
+        height: auto;
+        min-height: 200px;
+        max-height: 300px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+    .timeline-img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    
+    .timeline-caption p {
+        font-size: 0.7rem;
+    }
+}
 
  /* Paradox Section */
  .paradox-section {
@@ -1004,6 +1016,16 @@
     
     .paradox-image {
         height: 200px;
+        overflow: hidden;
+        border-radius: 15px;
+        padding: 0;
+    }
+    
+    .paradox-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
     }
     
          .paradox-location p {
