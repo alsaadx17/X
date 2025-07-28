@@ -82,16 +82,7 @@ if (hamburger && mobileMenu) {
     }
 }
 
-// Logo animations and interactions
-const logo = document.querySelector('.navbar .logo');
-const logoImg = document.querySelector('.navbar .logo img');
-
-if (logo && logoImg) {
-    // Logo is ready
-}
-
-// Navigation links are ready
-const navLinks = document.querySelectorAll('.navbar .nav-links a');
+// Logo and navigation elements are ready for future enhancements
 
 // Scroll-triggered animations
 function handleScrollAnimations() {

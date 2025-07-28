@@ -35,18 +35,13 @@ body {
 /* Image Security - Prevent Downloading */
 img {
     -webkit-user-drag: none;
-    -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    pointer-events: none;
+    user-drag: none;
+    /* Remove pointer-events: none to maintain accessibility */
 }
 
-/* Prevent text selection on all elements */
+/* Prevent text selection on most elements but allow it where needed */
 * {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -176,22 +171,7 @@ img {
     display: none;
 }
 
-.navbar .social {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.navbar .social a {
-    color: var(--color-text-primary);
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.navbar .social a:hover {
-    color: var(--color-text-secondary);
-}
+/* Removed unused .navbar .social styles */
 
 .hamburger {
     display: none;
@@ -328,34 +308,7 @@ img {
     background: rgba(255, 255, 255, 0.02);
 }
 
-.mobile-logo-text {
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: var(--color-background);
-}
-
-.close-mobile-menu {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--color-background);
-    line-height: 1;
-    padding: 4px;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.close-mobile-menu:hover {
-    background: rgba(0, 0, 0, 0.1);
-    transform: scale(1.1);
-}
+/* Removed unused mobile menu close button styles */
 
 .mobile-menu-links {
     display: flex;
@@ -533,24 +486,7 @@ img {
     transition: transform 0.1s ease;
 }
 
-.dropdown-hamburger {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    margin: 8px auto 0 auto;
-}
-
-.dropdown-hamburger span {
-    width: 18px;
-    height: 2px;
-    background: var(--color-background); /* Darkest green */
-    margin: 3px 0;
-    border-radius: 2px;
-    display: block;
-}
+/* Removed unused .dropdown-hamburger styles */
 
 /* Footer Section */
 .footer {
