@@ -91,4 +91,49 @@ if (logo && logoImg) {
 }
 
 // Navigation links are ready
-const navLinks = document.querySelectorAll('.navbar .nav-links a'); 
+const navLinks = document.querySelectorAll('.navbar .nav-links a');
+
+// Scroll-triggered animations
+function handleScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    
+    animatedElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        const windowHeight = window.innerHeight;
+        
+        // Check if element is in viewport (80% threshold)
+        if (elementTop < windowHeight * 0.8 && elementBottom > 0) {
+            // Remove the initial opacity: 0 and trigger the animation
+            element.style.opacity = '1';
+            
+            // Add a class to indicate the animation has been triggered
+            element.classList.add('animated');
+        }
+    });
+}
+
+// Throttle function to limit scroll event frequency
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+// Add scroll event listener with throttling
+window.addEventListener('scroll', throttle(handleScrollAnimations, 50));
+
+// Initial check for elements already in view
+document.addEventListener('DOMContentLoaded', () => {
+    handleScrollAnimations();
+});
+
+// Check on window resize
+window.addEventListener('resize', throttle(handleScrollAnimations, 50)); 
