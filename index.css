@@ -165,7 +165,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -177,7 +176,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-background);
 }
 
 .hero-text-content {
@@ -231,7 +229,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-background);
 }
 
 .hero-portrait {
@@ -350,7 +347,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -362,7 +358,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-background);
 }
 
 .featured-text-content {
@@ -402,7 +397,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-background);
 }
 
 .featured-portrait {
@@ -432,7 +426,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--color-background);
     box-sizing: border-box;
 }
 
@@ -598,27 +591,25 @@
  }
  
  .timeline-container {
-     position: relative;
-     width: 100%;
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     padding: 0;
-     box-sizing: border-box;
- }
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
  
  /* Top Container - Title */
  .timeline-title-container {
-     position: relative;
-     width: 100%;
-     height: 20%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     background: var(--color-background);
- }
+    position: relative;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
  
  .timeline-title {
      color: var(--color-text-primary);
@@ -632,30 +623,28 @@
  
  /* Bottom Container - Timeline Entries */
  .timeline-entries {
-     position: relative;
-     width: 100%;
-     height: 80%;
-     display: flex;
-     align-items: flex-start;
-     justify-content: space-between;
-     background: var(--color-background);
-     padding: 0 30px;
-     box-sizing: border-box;
- }
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
  
  /* Individual Timeline Entry */
  .timeline-entry {
-     position: relative;
-     width: 30%;
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
-     justify-content: flex-start;
-     background: var(--color-background);
-     padding: 20px 0;
-     box-sizing: border-box;
- }
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
  
  .timeline-year {
      color: var(--color-text-primary);
@@ -835,7 +824,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--color-background);
     padding: 0 5%;
     box-sizing: border-box;
 }
@@ -848,7 +836,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-background);
 }
 
 .paradox-text-content {
@@ -896,7 +883,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--color-background);
 }
 
  .paradox-image {
@@ -1018,7 +1004,6 @@
         height: 200px;
         overflow: hidden;
         border-radius: 15px;
-        padding: 0;
     }
     
     .paradox-img {
