@@ -6,6 +6,102 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation classes for scroll triggering */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+}
+
+.animate-on-scroll.animate-fade-in-up.animated {
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-on-scroll.animate-fade-in-left.animated {
+    animation: fadeInLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-on-scroll.animate-fade-in-right.animated {
+    animation: fadeInRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-on-scroll.animate-scale-in.animated {
+    animation: scaleIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Staggered animation delays */
+.animate-delay-1 {
+    animation-delay: 0.15s;
+}
+
+.animate-delay-2 {
+    animation-delay: 0.3s;
+}
+
+.animate-delay-3 {
+    animation-delay: 0.45s;
+}
+
+.animate-delay-4 {
+    animation-delay: 0.6s;
+}
+
+.animate-delay-5 {
+    animation-delay: 0.75s;
+}
+
+.animate-delay-6 {
+    animation-delay: 0.9s;
+}
+
 /* About Me Header Section */
 .about-header {
     min-height: 100vh;
@@ -34,6 +130,7 @@ body {
     justify-content: center;
 }
 
+/* Enhanced image container animations */
 .about-image {
     position: relative;
     width: 100%;
@@ -42,6 +139,12 @@ body {
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 .about-portrait {
@@ -49,11 +152,12 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-portrait:hover {
     transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 /* Right Container - Description and Text */
@@ -77,6 +181,11 @@ body {
     letter-spacing: 3px;
     text-transform: uppercase;
     line-height: 1.1;
+    transition: color 0.3s ease;
+}
+
+.about-name:hover {
+    color: var(--color-text-secondary);
 }
 
 .about-profession {
@@ -86,6 +195,11 @@ body {
     margin: 0 0 30px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.about-profession:hover {
+    color: var(--color-text-primary);
 }
 
 .about-description {
@@ -95,6 +209,11 @@ body {
     margin: 0 0 40px 0;
     line-height: 1.8;
     letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.about-description:hover {
+    color: var(--color-text-secondary);
 }
 
 .about-details {
@@ -106,6 +225,13 @@ body {
     align-items: center;
     margin-bottom: 15px;
     gap: 15px;
+    transition: transform 0.3s ease, padding-left 0.3s ease;
+    padding-left: 0;
+}
+
+.detail-item:hover {
+    transform: translateX(10px);
+    padding-left: 10px;
 }
 
 .detail-label {
@@ -115,6 +241,11 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     min-width: 120px;
+    transition: color 0.3s ease;
+}
+
+.detail-item:hover .detail-label {
+    color: var(--color-text-primary);
 }
 
 .detail-value {
@@ -122,12 +253,39 @@ body {
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.detail-item:hover .detail-value {
+    color: var(--color-text-secondary);
+}
+
+/* Email link styling */
+.email-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.email-link:hover {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+}
+
+.detail-item:hover .email-link {
+    color: var(--color-text-secondary);
 }
 
 .about-quote {
     border-left: 3px solid var(--color-text-primary);
     padding-left: 20px;
     margin-top: 30px;
+    transition: border-left-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.about-quote:hover {
+    border-left-color: var(--color-text-secondary);
+    padding-left: 25px;
 }
 
 .about-quote p {
@@ -138,6 +296,11 @@ body {
     margin: 0;
     line-height: 1.6;
     letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.about-quote:hover p {
+    color: var(--color-text-secondary);
 }
 
 /* Responsive Design */
@@ -256,4 +419,16 @@ body {
     .about-quote p {
         font-size: 1rem;
     }
+} 
+
+/* Footer link hover effects */
+.footer-links a,
+.footer-social a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--color-text-secondary);
+    transform: translateX(5px);
 } 
